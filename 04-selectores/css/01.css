@@ -1,0 +1,132 @@
+/* 01 selector de etiqueta*/
+p {
+    color: red;
+    font-size: 2rem;
+}
+/* 02 selector de clase*/
+.primer-parrafo {
+    font-size: 4rem;
+    color: pink;
+}
+
+/* 03 selector de 2 clases*/
+.texto {
+    background-color: gray;
+}
+.azul{
+    color: blue;
+}
+.mayusculas {
+    text-transform: uppercase;
+}
+
+.texto.mayusculas {
+    font-size: 10rem;
+}
+
+.texto.azul {
+    text-align: right;
+}
+
+/* 04 selector de clases anidades*/
+.header .descripcion {
+    color: aqua;
+}
+.descripcion {
+    color:blueviolet;
+}
+
+/* 05 selector de ID */
+#encabezado {
+    text-transform: uppercase;
+    color: yellow;
+}
+
+/* 06 selector de etiqueta y clase */
+div.texto {
+    background-color: yellowgreen   ;
+}
+
+/* 07  multiples ellementos*/
+.texto, .oferta{
+    border: 3px solid yellow;
+    padding: 2rem;
+}
+
+/* 08 selector del primer nivel de hijos */
+.admin > div {
+    border: 2px solid red;
+}
+
+/* 09 primer elemento */
+/* con el mas se va al siguiente hijo */
+.admin div + p {
+    background-color: brown;
+}
+
+/* 10 atributo */
+/* a[href$=".com"] { selecciona todos los elementos a que su atributo href terminen con .com  */
+a[href^="http"] { /*todos lo que empiezen con http*/
+    color: green;
+}
+/* a[href="http://www.google.com"] {
+    color: green;
+} */
+
+input[type="tel"] {
+    border: 2px solid purple;
+}
+
+/* 11 primer elemento de un lista */
+/* first-oftype */
+ul li:first-child {
+    border: 2px solid blue;
+}
+
+/* 12 ultimo elemeto */
+ul li:last-of-type {
+    border: 1px solid green;
+}
+
+/* 13 elemento en espesifico */
+ul li:nth-child(3) {
+    border: 4px solid yellow;
+}
+
+/*
+ul li:nth-child(2n + 1)
+=
+2(0) + 1 = 1
+2(1) + 1 = 3
+2(2) + 1 = 5
+2(100) + 1 = 201
+ */
+
+ /*
+ ul li:nth-child(odd)
+ selecciona todos los elemtos impares 
+ ul li:nth-child(even)
+ selecciona todos los elemtos pares 
+  */
+
+  /* 14 todos los elementos expeto uno */
+  /* 
+  la clase que deseas excluir
+  p:not(.texto) {
+    color: aqua;
+  } 
+  
+  concatenar
+   p:not(.texto):not(.oferta) {
+    color: aqua;
+  } 
+  */
+
+  /* 15 primer letra y linea de un parrafo */
+  .primer-letra::first-letter {
+    font-size: 20rem;
+  }
+
+  .primer-linea::first-line {
+    font-size: 4rem;
+  }
